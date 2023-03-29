@@ -43,7 +43,8 @@
 
 <body>
 	<div class="wrapper">
-		<section class="main">
+		<header>
+			<section class="main">
 	<div class="main__container container">
 		<a href='' class="main__logo"><img src="img/item/logo.png" alt=""></a>
 		<div class="main__text text">
@@ -57,14 +58,16 @@
 	</div>
 	<div class="main__bg ibg"><img src="img/BG/bigBG.jpg" alt=""></div>
 </section>
-		<section class="about">
+		</header>
+		<main>
+			<section class="about">
 	<div class="about__container container">
 		<div class="about__header header">
 			<div class="header__burger">
 				<span></span>
 			</div>
 			<nav class="header__menu">
-				<ul class="header__list">
+				<ul class="header__list" data-lineEffect>
 					<li><a href="" class="header__link active">HOME</a></li>
 					<li><a href="" class="header__link">ABOUT US</a></li>
 					<li><a href="" class="header__link">PORTFOLIO</a></li>
@@ -102,59 +105,61 @@
 		</div>
 	</div>
 </section>
-		<div class="portfolio">
+			<section class="portfolio">
 	<div class="portfolio__container container">
-		<div class="portfolio__title title">Portfolio</div>
-		<nav class="portfolio__menu">
-			<ul class="portfolio__list">
-				<li data-filter='all' class="portfolio__link active">all</li>
-				<li data-filter='web' class="portfolio__link">Web</li>
-				<li data-filter='apps' class="portfolio__link">apps</li>
-				<li data-filter='others' class="portfolio__link">others</li>
+		<div class="portfolio__blocktext blocktext">
+			<div class="blocktext__title title">PORTFOLIO </div>
+			<ul class="blocktext__links">
+				<li class="blocktext__link active" data-filter="all">all</li>
+				<li class="blocktext__link" data-filter="web">web</li>
+				<li class="blocktext__link" data-filter="apps">apps</li>
+				<li class="blocktext__link" data-filter="others">others</li>
 			</ul>
-		</nav>
-		<div class="portfolio__row">
-			<div data-gallery class="portfolio__column">
-				<div data-src="img/item/block.png" class="portfolio__item web">
-					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
-				</div>
-				<div data-src="img/item/block.png" class="portfolio__item web">
-					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
-				</div>
-				<div data-src="img/item/block.png" class="portfolio__item apps">
-					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
-				</div>
-				<div data-src="img/item/block.png" class="portfolio__item apps">
-					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
-				</div>
-				<div data-src="img/item/block.png" class="portfolio__item others">
-					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
-				</div>
-				<div data-src="img/item/block.png" class="portfolio__item others">
-					<a href='' class="portfolio__image"><img src="img/item/block.png" alt=""></a>
-				</div>
-			</div>
 		</div>
-		<div class="portfolio__footer">
-			<a href="" class="portfolio__btn btn btn_b"><span>READ MOre</span></a>
+		<div data-gallery class="portfolio__items">
+			<div data-src="img/item/block.png" class="portfolio__item web"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+			<div data-src="img/item/block.png" class="portfolio__item web"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+			<div data-src="img/item/block.png" class="portfolio__item apps"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+			<div data-src="img/item/block.png" class="portfolio__item apps"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+			<div data-src="img/item/block.png" class="portfolio__item apps"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+			<div data-src="img/item/block.png" class="portfolio__item others"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+			<div data-src="img/item/block.png" class="portfolio__item others"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+			<div data-src="img/item/block.png" class="portfolio__item others"><a href="">
+					<img src="img/item/block.png" alt="">
+				</a></div>
+		</div>
+		<div class="portfolio__btn btn btn_b">
+			<span>READ MORE</span>
 		</div>
 	</div>
-</div>
-		<div class="partners">
+</section>
+			<div class="partners">
 	<div class="partners__container container">
 		<div class="partners__title">Our partners</div>
-		<div class="partners__row">
-			<div class="partners__column">
-				<div class="partners__image"><img src="img/item/bottomL.png" alt=""></div>
-				<div class="partners__image"><img src="img/item/bottomLC.png" alt=""></div>
-				<div class="partners__image"><img src="img/item/bottomCR.png" alt=""></div>
-				<div class="partners__image"><img src="img/item/bottomR.png" alt=""></div>
-			</div>
+		<div class="partners__items">
+			<div class="partners__image"><img src="img/item/bottomL.png" alt=""></div>
+			<div class="partners__image"><img src="img/item/bottomLC.png" alt=""></div>
+			<div class="partners__image"><img src="img/item/bottomCR.png" alt=""></div>
+			<div class="partners__image"><img src="img/item/bottomR.png" alt=""></div>
 		</div>
 	</div>
 	<div class="partners__bg ibg"><img src="img/BG/BG2.jpg" alt=""></div>
 </div>
-		<div class="contact">
+			<div class="contact">
 	<div class="contact__container container">
 		<div class="contact__title title">Contact</div>
 		<div class="contact__content">
@@ -210,7 +215,9 @@
 		</div>
 	</div>
 </div>
-		<footer class="footer">
+		</main>
+		<footer>
+			<footer class="footer">
 	<div class="footer__container container">
 		<div class="footer__body">
 			<div class="footer__logo"><img src="img/item/Logofooter.png" alt=""></div>
@@ -228,6 +235,7 @@
 		</div>
 	</div>
 </footer>
+		</footer>
 	</div>
 	<script src="js/app.min.js"></script>
 </body>
