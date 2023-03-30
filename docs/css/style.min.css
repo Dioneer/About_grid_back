@@ -378,21 +378,15 @@ footer {
   grid-template: minmax(70px, auto) repeat(2, auto)/minmax(auto, 900px);
   justify-content: center;
   text-align: center;
-  grid-template-areas: "menu" "text" "cards";
 }
 .about__header {
-  grid-area: menu;
   padding: 0px 0px 10% 0px;
 }
 .about__header.active {
   padding: 0px 0px 5% 0px;
 }
 .about__content {
-  grid-area: text;
   padding: 0px 0px 10% 0px;
-}
-.about__cards {
-  grid-area: cards;
 }
 
 .header__burger {
@@ -496,6 +490,7 @@ footer {
 
 .content__title {
   margin: 0px 0px 4% 0px;
+  font-weight: 700;
 }
 .content__text {
   max-width: 600px;
@@ -679,119 +674,84 @@ footer {
   max-width: 100%;
 }
 
-.contact {
-  padding: 5% 0px;
-}
-.contact__container {
+.contacts {
+  background: #fff;
+  padding: 4% 0px 2% 0px;
   text-align: center;
 }
-.contact__title {
-  font-weight: 900;
+.contacts__container {
+  display: grid;
+  grid-template: minmax(50px, auto) 1fr;
 }
-.contact__content {
-  margin: 10% 0px 0px 0px;
-}
-@media (min-width: 767.98px) {
-  .contact__content {
-    margin: 10% 20px 0px;
-    display: flex;
-    align-items: start;
-  }
-}
-@media (min-width: 767.98px) {
-  .contact__item {
-    flex: 1 0 50%;
-    padding: 0px 20px;
-  }
-  .contact__item_start {
-    justify-items: flex-start;
-  }
+.contacts__title {
+  font-weight: 700;
+  margin: 0px 0px 10% 0px;
 }
 
-.inputdata__row {
+.form {
+  display: grid;
+  grid-template: 1fr/repeat(2, 1fr);
+  column-gap: 75px;
+}
+@media (max-width: 767.98px) {
+  .form {
+    display: block;
+  }
+}
+.form__input-form {
+  margin: 0px 0px 2% 0px;
+}
+.form__text-form {
+  margin: 0px 0px 2% 0px;
+}
+
+.input-form {
   text-align: left;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: row;
 }
-.inputdata__small {
-  margin: 0px 0px 15% 0px;
+.input-form__small {
+  display: grid;
+  grid-template: 1fr/repeat(2, 1fr);
+  column-gap: 35px;
+  margin: 0px 0px 12% 0px;
 }
-.inputdata__big {
-  margin: 0px 0px 5% 0px;
+.input-form__textarea {
+  margin: 0px 0px 5px 0px;
 }
-.inputdata__btn {
-  align-self: end;
-}
-
-.small__column {
-  display: flex;
-  margin: 0px -15px;
-}
-@media (max-width: 767.98px) {
-  .small__column {
-    margin: 0px -10px;
-  }
-}
-.small__item {
-  flex: 1 0 50%;
-  padding: 0px 15px;
-}
-@media (max-width: 767.98px) {
-  .small__item {
-    padding: 0px 10px;
-  }
-}
-.small__label {
-  margin: 0px 0px 10px 0px;
+.input-form__btn {
+  justify-self: end;
 }
 
-.textContent {
+.text-form {
+  color: #3c3c3c;
   text-align: left;
+  max-width: 250px;
 }
-.textContent__rest {
-  max-width: 200px;
-  color: #333;
+.text-form__idea {
+  margin: 0px 0px 10% 0px;
 }
-.textContent__text {
-  letter-spacing: 0.2125rem;
-  font-size: 0.75rem;
-  margin: 0px 0px 15% 0px;
+.text-form__athor {
+  margin: 0px 0px 10% 0px;
 }
-@media (max-width: 767.98px) {
-  .textContent__text {
-    margin: 0px 0px 5% 0px;
-  }
+.text-form__social {
+  margin: 0px 0px 10% 0px;
 }
-.textContent__name {
-  letter-spacing: 0.2125rem;
-  font-size: 0.75rem;
-  margin: 0px 0px 15% 0px;
+.text-form__email a {
+  margin: 0px 0px 10% 0px;
+  color: #3c3c3c;
 }
-@media (max-width: 767.98px) {
-  .textContent__name {
-    margin: 0px 0px 5% 0px;
-  }
+
+.social {
+  display: grid;
+  grid-template: 1fr/repeat(auto-fit, minmax(25px, 70px));
 }
-.textContent__social {
-  display: flex;
-  max-width: 100px;
-  align-items: center;
-  margin: 0px 0px 15% 0px;
+.social__link {
+  display: grid;
+  align-items: end;
 }
-.textContent__social img {
-  flex: 0 0 10px;
+.social__link img {
   max-width: 100%;
-  display: block;
-  margin: 0px 10px 0px 0px;
-}
-@media (max-width: 767.98px) {
-  .textContent__social {
-    margin: 0px 0px 5% 0px;
-  }
-}
-.textContent__email {
-  font-size: 0.75rem;
-  color: #333;
 }
 
 .footer {
@@ -1614,6 +1574,7 @@ html.popup-show {
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
+  padding: 0px 0px 10px 0px;
 }
 
 .input {
@@ -1668,6 +1629,11 @@ html.popup-show {
   opacity: 1;
   visibility: visible;
   overflow: hidden;
+}
+.form__error {
+  color: red;
+  margin: 4px 0px 0px 0px;
+  font-size: 0.75rem;
 }
 
 .popup {

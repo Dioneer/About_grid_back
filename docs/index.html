@@ -4,40 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <link rel="stylesheet" href="css/swiperorigin.css"> -->
-	<!-- <link rel="stylesheet" href="fonts/fontawesome/fontawesome.css">
-<link rel="stylesheet" href="fonts/fontawesome/regular.css"> -->
-	<!-- можно сделать на icomoon.io -->
-	<!-- <link rel="stylesheet" href="fonts/fontawesome/styleicon.css"> -->
 	<link rel="stylesheet" href="css/style.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--SEO============================================================================================================-->
-	<!--<meta name=" description" content=" ">-->
-	<!--<meta name="keywords" content=" ">-->
-	<!--Social==========================================================================================================-->
-	<!--<meta property="og:locale" content="ru_RU">
-<meta property="og:type" content="article">
-<meta property="og:title" content="META теги">
-<meta property="og:description" content="Описание страницы про META теги">
-<meta property="og:image" content="http://fls.guru/meta/img/bg.jpg">
-<meta property="og:url" content="http://fls.guru/meta/ ">
-<meta property="og:site_name" content="Фрилансер по жизни">
-
-Проверить разметку можно в валидаторе от Facebook https://developers.facebook.com/tools/debug/sharing/
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="Жека">
-<meta name="twitter:title" content="META теги">
-<meta name="twitter:description" content="про META теги">
-<meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg">
-
-Проверяем результат в валидаторе твиттер https://cards-dev.twitter.com/validator-->
-	<!--Robots==========================================================================================================-->
-	<!--<meta name="robots" content="noindex, nofollow">-->
-	<!--Refresh=========================================================================================================-->
-	<!--<meta http-equiv="refresh" content="S; url=URL">-->
-	<!--Scope===========================================================================================================-->
-	<!--maximun-scale=1.0, user-scalable=no-->
 	<title>About2</title>
 </head>
 
@@ -159,53 +127,49 @@
 	</div>
 	<div class="partners__bg ibg"><img src="img/BG/BG2.jpg" alt=""></div>
 </div>
-			<div class="contact">
-	<div class="contact__container container">
-		<div class="contact__title title">Contact</div>
-		<div class="contact__content">
-			<div class="contact__item inputdata">
-				<form method="post" class="form__body goto-error" action="http://localhost:5050/save_user_message">
-					<div class="inputdata__row">
-						<div class="inputdata__small small">
-							<div class="small__column">
-								<div class="small__item">
-									<label for="name" class="small__label label">Your Name</label>
-									<input id='name' type="text" data-validate data-value="" data-error="не введено имя"
-										autocomplete="off" name="name" class="input req">
-								</div>
-								<div class="small__item">
-									<label for="email" class="small__label label">Your E-mail</label>
-									<input id="email" type="text" data-validate data-value="" data-error="не указан email"
-										autocomplete="off" name="email" class="input email req">
-								</div>
-							</div>
-						</div>
-						<div class="inputdata__big big">
-							<label for="teatarea" class="small__label label">Your message</label>
-							<textarea id="teatarea" type="text" data-validate data-value="" data-error="не заполнено поле"
-								autocomplete="off" name="textarea" class="textarea req"></textarea>
-						</div>
-						<button type="submit" class="inputdata__btn btn btn_s"><span>SEND</span></button>
+			<section class="contacts">
+	<div class="contacts__container container">
+		<div class="contacts__title title">CONTACT</div>
+		<form action="http://localhost:5050/save_user_message" method="post" class="contacts__form form goto-error">
+			<div class="form__input-form input-form">
+				<div class="input-form__small">
+					<div class="input-form__input">
+						<label for="userName" class="label">Your Name:</label>
+						<input type="text" data-validate data-value="" data-error="не введено имя" autocomplete="off"
+							id="userName" name="name" class="input req">
 					</div>
-				</form>
-			</div>
-			<div class="contact__item contact__item_start textContent">
-				<div class="textContent__rest">
-					<div class="textContent__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-						perferendis
-						rerum delectus aut iste sit, aspernatur adipisci velit!</div>
-					<div class="textContent__name">Lorem, ipsum</div>
-					<div class="textContent__social">
-						<a href=""><img src="img/item/F.png" alt=""></a>
-						<a href=""><img src="img/item/in.png" alt=""></a>
+					<div class="input-form__input">
+						<label for="userEmail" class="label">Your EMAIL:</label>
+						<input type="text" data-validate data-value="" data-error="не введен email" autocomplete="off"
+							id="userEmail" name="email" class="input req email">
 					</div>
-					<a href="mailto:e-mail:sad.asdasdad@gmail.com"
-						class="textContent__email">e-mail:sad.asdasdad@gmail.com</a>
+				</div>
+				<div class="input-form__textarea">
+					<div class="input-form__input">
+						<label for="userMessage" class="label">Message:</label>
+						<textarea data-validate data-value="" data-error="не введен text" autocomplete="off" id="userMessage"
+							name="textarea" class="textarea req"></textarea>
+					</div>
+				</div>
+				<div class="input-form__btn">
+					<button type="submit" class="btn btn_s"><span>Send</span></button>
 				</div>
 			</div>
-		</div>
+			<div class="form__text-form text-form">
+				<div class="text-form__idea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem atque sunt
+					laudantium dolorem molestias repellendus officia! Consectetur?</div>
+				<div class="text-form__athor">Postma Elena</div>
+				<div class="text-form__social social">
+					<a href="" class="social__link"><img src="img/item/F.png" alt=""></a>
+					<a href="" class="social__link"><img src="img/item/in.png" alt=""></a>
+				</div>
+				<div class="text-form__email">
+					<a href="mailto:postma.elena@gmial.com"><span>e-mail:postma.elena@gmial.com</span></a>
+				</div>
+			</div>
+		</form>
 	</div>
-</div>
+</section>
 <div class="popup">
 	<div class="popup__body">
 		<div class="popup__content">
